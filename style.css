@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /**Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
 /**Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+/**Concert One */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +35,7 @@
     display: inline-block;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .content {
         width: 100%;
     }
@@ -44,38 +45,54 @@
     transition: 500ms;
     font-family: 'Nunito';
     max-height: 200px;
-    padding: 48px;
+    padding: 48px 32px;
     background-image: linear-gradient(
-        180deg,
-        hsl(240deg 65% 9%) 0%,
-        hsl(300deg 39% 21%) 50%,
-        hsl(0deg 15% 32%) 100%
+        0deg,
+        hsl(156deg 42% 39%) 0%,
+        hsl(156deg 42% 46%) 11%,
+        hsl(156deg 42% 52%) 22%,
+        hsl(155deg 42% 59%) 33%,
+        hsl(155deg 42% 66%) 44%,
+        hsl(156deg 42% 73%) 56%,
+        hsl(155deg 42% 80%) 67%,
+        hsl(155deg 42% 86%) 78%,
+        hsl(156deg 43% 93%) 89%,
+        hsl(0deg 0% 100%) 100%
     );
     border-radius: 6px 6px 22px 22px;
     box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.347);
 }
 
 .message {
-    letter-spacing: 1px;
-    color: rgb(202, 202, 202);
-    font-weight: bold;
+    text-shadow: 0px 5px 15px rgb(219, 81, 81);
+    color: rgb(43, 43, 43);
+    font-family: 'Concert One';
+    background: none !important;
+    background-color: none !important;
+    background-image: none !important;
 }
-
+.message a{
+    color:rgb(255, 85, 85);
+}
+.message a:hover{
+    color:rgb(164, 85, 255);
+}
 .btn {
-    margin: 32px 0px;
+    margin: 22px 0px 6px 0px;
     display: flex;
     justify-content: center;
 }
-
-button {
+.generate{
     width: 100%;
+}
+.generate {
     align-items: center;
     background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
     border: 0;
     border-radius: 8px;
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
     box-sizing: border-box;
-    color: #3b3b3b;
+    color: #7e7e7e;
     display: flex;
     font-family: Phantomsans, sans-serif;
     font-size: 18px;
@@ -93,17 +110,17 @@ button {
     transition: all .3s;
 }
 
-button:active,
-button:hover {
+.generate:active,
+.generate:hover {
     outline: 0;
     color: #e4e4e4;
 }
 
-button span {
+.generate span {
     font-family: 'Poppins';
     letter-spacing: 2.5px;
     font-weight: bold;
-    background-color: rgb(191, 191, 191);
+    background-color: rgb(48, 48, 48);
     padding: 16px 24px;
     border-radius: 6px;
     width: 100%;
@@ -111,16 +128,41 @@ button span {
     transition: 300ms;
 }
 
-button:hover span {
+.generate:hover span {
     background: none;
     
 }
 
-button:active {
+.generate:active {
     transform: scale(0.9);
 }
 
-
+.toggles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggle-dark{
+    background-color: #191919a4;
+    padding: 16px;
+    border: none;
+    border-radius: 999px;
+    transition: 500ms  !important;
+    cursor: pointer;
+}
+.toggle-dark:hover{
+    border-radius: 999px;
+    box-shadow: 0px 2px 10px -5px rgb(0, 0, 0);
+    background-color: #3b3b3b86;
+    transform: rotate(10deg);
+}
+.toggle-dark:active{
+    transform: scale(0.9);
+}
+.toggle-dark svg{
+    transform: scale(2);
+    fill: white;
+}
 
 
 .footer {
@@ -148,7 +190,11 @@ button:active {
 .navbar {
     font-family: 'Poppins';
     font-size: 12px;
-    background-color: #00DDEB;
+    background-color: #105a5f;
+    color:rgb(214, 214, 214);
+}
+.navbar a{
+    color: rgb(255, 96, 96);
 }
 
 .load{
@@ -213,4 +259,25 @@ button:active {
     50% {
         transform: translateY(-10px);
     }
+}
+
+.dark{
+    text-shadow: 0px 5px 15px rgb(0, 0, 0);
+    fill:rgb(16, 16, 16)!important;
+    background-image: linear-gradient(
+        180deg,
+        hsl(240deg 65% 9%) 0%,
+        hsl(300deg 39% 21%) 50%,
+        hsl(0deg 15% 32%) 100%
+    );
+    color:#dedede;
+}
+
+.wave path{
+    fill: rgb(229, 229, 229);
+    filter: drop-shadow(8px 5px 1px rgb(69, 225, 194));
+    overflow: visible;
+}
+.wave-shad{
+    filter: drop-shadow(8px 10px 10px rgba(239, 28, 225, 0.361)) !important;
 }
